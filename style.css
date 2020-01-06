@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.d2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(aspen.jpg);
+    background-size: cover;
+    background-position: 0px -250px;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-attachment: fixed;
+    transition: 0.5s;
+}
+
+.d1 {
+    /*All these numbers were found by trial and error and only works for this image.  To make sure this effect works for all images, gotta use an image that has the same resolution as the one the operating system is working.*/
+    position: absolute;
+    z-index: 1;
+    background-image: url(aspen.jpg);
+    background-position: 0px -250px;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 450px;
+    top: calc(50% - 225px);
+    left: calc(50% - 300px);
+    background-size: 100%;
+    background-attachment: fixed;
+    transition: 0.5s;
+}
+
+.d1:hover {
+    box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.8);
+}
+
+.d1:hover ~ .d2 {
+    filter: blur(10px);
+}
